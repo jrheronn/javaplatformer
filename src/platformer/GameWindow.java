@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 public class GameWindow extends JFrame implements ActionListener {
 
     private Timer timer;
+    private int playerX, playerY; // Player's position
 
     public GameWindow() {
         setTitle("Game Title");
@@ -29,6 +30,8 @@ public class GameWindow extends JFrame implements ActionListener {
 
     public void paint(Graphics g) {
         // Draw game objects and graphics here
+        g.setColor(Color.blue);
+        g.fillRect(playerX, playerY, 50, 50);
     }
 
     public static void main(String[] args) {
